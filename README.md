@@ -2,6 +2,6 @@
 
 Included in 3 programming languages:
 
-- Javascript
+- Typescript
 - Python
 - PHP
