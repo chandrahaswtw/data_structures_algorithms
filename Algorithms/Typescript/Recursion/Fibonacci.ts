@@ -4,7 +4,7 @@ interface Imemo {
   [key: number]: number;
 }
 
-function febinocci(n: number, memo: Imemo = {}) {
+function fibonacci(n: number, memo: Imemo = {}) {
   if (n <= 1) {
     return n;
   }
@@ -18,10 +18,10 @@ function febinocci(n: number, memo: Imemo = {}) {
     // Printing here memo value will print duplicate value.
   }
 
-  const feb = febinocci(n - 1, memo) + febinocci(n - 2, memo);
+  const feb = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
   memo[n] = feb;
   console.log(feb);
   return feb;
 }
 
-febinocci(5);
+fibonacci(5);

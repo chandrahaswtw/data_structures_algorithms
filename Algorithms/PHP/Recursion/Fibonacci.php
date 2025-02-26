@@ -2,7 +2,7 @@
 
 // Febiniocci with memoization
 
-function febinocci(int $n, array &$memo = [])
+function fibonacci(int $n, array &$memo = [])
 {
 
     if ($n <= 1) {
@@ -13,10 +13,10 @@ function febinocci(int $n, array &$memo = [])
         return $memo[$n];
     }
 
-    $feb = febinocci($n - 1, $memo) + febinocci($n - 2, $memo);
+    $feb = fibonacci($n - 1, $memo) + fibonacci($n - 2, $memo);
     echo $feb . "<br/>";
     $memo[$n] = $feb;
     return $feb;
 }
 
-febinocci(5);
+fibonacci(5);
