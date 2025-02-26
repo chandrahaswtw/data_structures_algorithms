@@ -1,5 +1,7 @@
 <?php
 
+// Navigate through deep structure of the JSON and recursively find all filenames.
+
 declare(strict_types=1);
 
 $fileContent = file_get_contents(__DIR__ . "/../../Files/Files.json");

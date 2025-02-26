@@ -1,4 +1,4 @@
-// Navigate through deep structure of the JSON and recursively find all the 
+// Navigate through deep structure of the JSON and recursively find all filenames.
 
 import filesData from "./../../Files/files.json" with { type: "json" };
 function getFiles(data : any, files : any[] = []){
