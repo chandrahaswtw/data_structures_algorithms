@@ -1,4 +1,3 @@
-<?php
 /*
 Binary search requires the array to be sorted before it can be applied. Here’s how it works:
     - The algorithm starts by checking the middle element of the array.
@@ -27,32 +26,29 @@ For example:
 - We may argue that why not consider only offset as median is 0. In some cases, median may not be 0 if we are left with array as [12, 59, 100]. In this case median will be 1 and desired position will be 1 + offset.
 */
 
-declare(strict_types=1);
+function binarySearch(arr: number[], target: number, offset: number = 0) {
+  // We are considering ceil of middle element, we subtracted 1 as array index start with 0.
+  let median = Math.ceil(arr.length / 2) - 1;
 
-function binarySearch(array $arr, int $target, $offset = 0)
-{
-    // We are considering ceil of middle element, we subtracted 1 as array index start with 0.
-    $median = (int) ceil(count($arr) / 2) - 1;
-
-    if ($target < $arr[$median]) {
-        // Consider left array -> no change in offset -> sliced the array excluding the median element.
-        // We can consider median element as well but no use as it didn't match.
-        return binarySearch(array_slice($arr, 0, $median), $target, $offset);
-    } else if ($target > $arr[$median]) {
-        // Consider right array -> increased the offset -> sliced the array excluding the median element -> While slicing the element we incremented by 1
-        // We increased the offset by 1 -> median + offset + 1 -> The extra + 1 is because we are slicing + 1 to avoid the median element.
-        return binarySearch(array_slice($arr, $median + 1), $target, $offset + $median + 1);
-    } else {
-        // Found the element, return the element.
-        return $offset + $median;
-    }
+  if (target < arr[median]) {
+    // Consider left array -> no change in offset -> sliced the array excluding the median element -> slice takes care of that.
+    // We can consider median element as well but no use as it didn't match.
+    return binarySearch(arr.slice(0, median), target, offset);
+  } else if (target > arr[median]) {
+    // Consider right array -> increased the offset -> sliced the array excluding the median element -> While slicing the element we incremented by 1
+    // We increased the offset by 1 -> median + offset + 1 -> The extra + 1 is because we are slicing + 1 to avoid the median element.
+    return binarySearch(arr.slice(median + 1), target, median + offset + 1);
+  } else {
+    // Found the element, return the element.
+    return median + offset;
+  }
 }
 
-$targetArray = [1, 2, 20, 46, 65, 78, 89, 92, 101];
+var targetArray = [1, 2, 20, 46, 65, 78, 89, 92, 101];
 
-// Sort the array
-sort($targetArray);
+// Sort the array, ascending direction.
+targetArray.sort((a, b) => a - b);
 
-$binaryPos = binarySearch($targetArray, 89);
+var binaryPos = binarySearch(targetArray, 101);
 
-var_dump($binaryPos);
+console.log(binaryPos);

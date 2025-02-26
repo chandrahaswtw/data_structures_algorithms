@@ -1,6 +1,8 @@
 <?php
 
-function factorial($n)
+declare(strict_types=1);
+
+function factorial(int $n)
 {
     if ($n === 1) {
         return 1;

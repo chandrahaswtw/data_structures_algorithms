@@ -2,6 +2,8 @@
 
 // Febiniocci with memoization
 
+declare(strict_types=1);
+
 function fibonacci(int $n, array &$memo = [])
 {
 

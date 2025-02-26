@@ -11,6 +11,6 @@ function linearSearch(arr: number[], num: number) {
   }
 }
 
-let pos = linearSearch([1, 2, 45, 6, 788], 788);
+let linearPos = linearSearch([1, 2, 45, 6, 788], 788);
 
-console.log(pos);
+console.log(linearPos);
