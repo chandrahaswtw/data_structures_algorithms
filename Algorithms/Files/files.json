@@ -1,0 +1,20 @@
+{
+  "documents": {
+    "files": ["one.ts", "two.ts"]
+  },
+  "work": {
+    "documents": {
+      "files": ["three.ts", "four.py"]
+    },
+    "folder": {
+      "project": {
+        "files": ["five.js", "six.py"]
+      }
+    },
+    "files": ["seven.php", "eight.php"]
+  },
+  "home": {
+    "files": ["nine.js", "ten.ts"]
+  },
+  "files": ["eleven.py", "twelve.php"]
+}

@@ -1,7 +1,6 @@
 # DATA STRUCTURES AND ALOGORITHMS
 
-Included in 3 programming languages:
+Included in 2 programming languages:
 
 - Typescript
-- Python
 - PHP
