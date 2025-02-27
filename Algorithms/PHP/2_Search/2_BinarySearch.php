@@ -25,6 +25,11 @@ For example:
 - Now we are left with [59] and median is 0.
 - Since we got the element, the actual index is the offset + current median. 
 - We may argue that why not consider only offset as median is 0. In some cases, median may not be 0 if we are left with array as [12, 59, 100]. In this case median will be 1 and desired position will be 1 + offset.
+
+Time complexity = O(log n)
+- Best case: O(1) if element is located at the middle.
+- Worst case: O(log n) if element is located at the beginning or end.
+- Average case: tends to O(log n).
 */
 
 declare(strict_types=1);
