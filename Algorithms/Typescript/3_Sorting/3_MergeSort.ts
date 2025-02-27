@@ -4,6 +4,8 @@ If array has 2 elements we re-arrange them in ascending order within the array.
 And then we start to merge. While merging, we make sure that they are merged in ascending order.
 Merging will happen between 2 arrays which are already in ascending order.
 
+Explanation image under root -> Algorithms -> Explanation -> 2_MergeSort.png
+
 Time complexity: 
 -	In all cases: O(nlogn) is guarenteed 
 */

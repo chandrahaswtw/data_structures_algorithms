@@ -6,6 +6,8 @@ We split the entire array in 3:
     - Center array which contains the pivot element and all the other elements which are equal to pivot.
 We in turn split the above array (left and right) into simpler pieces till it’s divided into single element array.
 
+Explanation image under root -> Algorithms -> Explanation -> 1_QuickSort.jpg
+
 Time complexity: 
 -	Best case: O(nlogn)
 -	Worst case: O(n^2)  When we perform on sorted array.
