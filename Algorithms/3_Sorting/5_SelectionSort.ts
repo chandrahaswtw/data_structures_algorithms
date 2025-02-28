@@ -1,5 +1,5 @@
 /*
-  Explanation video under root -> Algorithms -> Explanation -> 4_Selection Sort.mp4
+  Explanation video under root -> Explanation -> Algorithms -> 4_Selection Sort.mp4
 */
 
 function selectionSort(arr: number[]) {

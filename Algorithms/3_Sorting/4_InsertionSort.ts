@@ -1,5 +1,5 @@
 /*
-  Explanation video under root -> Algorithms -> Explanation -> 3_Insertion Sort.mp4
+  Explanation video under root -> Explanation -> Algorithms -> 3_Insertion Sort.mp4
 */
 
 function insertionSort(arr: number[]) {
